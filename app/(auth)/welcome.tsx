@@ -88,26 +88,20 @@ export default function Welcome() {
         style={{ flex: 1 }}
       >
         <View className="flex-1 justify-between px-6 pb-10 pt-14">
-          <Animated.View
-            style={textAnimatedStyle}
-          >
+          <Animated.View style={textAnimatedStyle}>
             <Animated.View
               style={logoAnimatedStyle}
               className="h-24 w-24 items-center justify-center rounded-3xl bg-white/20 backdrop-blur-md"
             >
               <Text className="text-5xl font-bold text-white">M</Text>
             </Animated.View>
-            <Text className="mt-6 text-4xl font-bold text-white">
-              Momentum
-            </Text>
+            <Text className="mt-6 text-4xl font-bold text-white">Momentum</Text>
             <Text className="mt-2 text-center text-base text-indigo-100">
               Construye hábitos y alcanza tus metas,{"\n"}un día a la vez.
             </Text>
           </Animated.View>
 
-          <Animated.View
-            style={featuresAnimatedStyle}
-          >
+          <Animated.View style={featuresAnimatedStyle}>
             {features.map((feature) => (
               <View
                 key={feature.title}
@@ -128,9 +122,7 @@ export default function Welcome() {
             ))}
           </Animated.View>
 
-          <Animated.View
-            style={buttonsAnimatedStyle}
-          >
+          <Animated.View style={buttonsAnimatedStyle}>
             <Link href="/(auth)/register" asChild>
               <Pressable className="items-center rounded-2xl bg-white py-4 active:opacity-80">
                 <Text className="text-base font-semibold text-indigo-600">

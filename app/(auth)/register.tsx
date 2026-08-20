@@ -1,11 +1,11 @@
 import { Link, router } from "expo-router";
-import { AlertCircle, Lock, Mail, User } from "lucide-react-native";
+import { Lock, Mail, User } from "lucide-react-native";
 import { useState } from "react";
 import { Text, View } from "react-native";
 
 import { registerSchema } from "@/features/auth/schema/schemas";
 import { useAuthStore } from "@/features/auth/store/auth.store";
-import { Input, Button, AuthScreenLayout } from "@/shared/components";
+import { Input, Button, AuthScreenLayout, ErrorBanner } from "@/shared/components";
 
 function getPasswordStrength(password: string): {
   level: number;
@@ -132,19 +132,10 @@ export default function Register() {
       />
 
       {(fieldError ?? error) ? (
-        <View className="flex-row items-center gap-2 rounded-xl bg-red-50 px-4 py-3">
-          <AlertCircle size={18} color="#ef4444" strokeWidth={2} />
-          <Text className="flex-1 text-sm text-red-600">
-            {fieldError ?? error}
-          </Text>
-        </View>
+        <ErrorBanner message={(fieldError ?? error)!} />
       ) : null}
 
-      <Button
-        label="Crear cuenta"
-        onPress={handleSubmit}
-        loading={loading}
-      />
+      <Button label="Crear cuenta" onPress={handleSubmit} loading={loading} />
     </AuthScreenLayout>
   );
 }

@@ -38,7 +38,7 @@ export async function register({ name, email, password }: RegisterInput) {
     password,
     options: { data: { name } },
   });
-  return error;
+  return mapError(error);
 }
 
 export async function logout() {
