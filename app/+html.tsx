@@ -19,6 +19,7 @@ export default function Root({ children }: Readonly<PropsWithChildren>) {
           content="Momentum es tu app para construir hábitos positivos, un día a la vez."
         />
         <meta name="theme-color" content="#4f46e5" />
+        <style>{`html, body { background-color: #f9fafb; }`}</style>
       </head>
       <body>{children}</body>
     </html>

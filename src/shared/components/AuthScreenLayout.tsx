@@ -54,24 +54,24 @@ export function AuthScreenLayout({
             keyboardShouldPersistTaps="handled"
             className="flex-1"
           >
-          <View className="w-full max-w-md self-center">
-            {showLogo ? (
-              <View className="mb-8 items-center">
-                <View className="h-20 w-20 items-center justify-center rounded-3xl bg-indigo-600 shadow-lg shadow-indigo-600/30">
-                  <Text className="text-3xl font-bold text-white">M</Text>
+            <View className="w-full max-w-md self-center">
+              {showLogo ? (
+                <View className="mb-8 items-center">
+                  <View className="h-20 w-20 items-center justify-center rounded-3xl bg-indigo-600 shadow-lg shadow-indigo-600/30">
+                    <Text className="text-3xl font-bold text-white">M</Text>
+                  </View>
                 </View>
-              </View>
-            ) : null}
+              ) : null}
 
-            <Text className="text-3xl font-bold text-gray-900">{title}</Text>
-            <Text className="mt-1.5 text-base text-gray-500">{subtitle}</Text>
+              <Text className="text-3xl font-bold text-gray-900">{title}</Text>
+              <Text className="mt-1.5 text-base text-gray-500">{subtitle}</Text>
 
-            <View className="mt-8 gap-4">{children}</View>
+              <View className="mt-8 gap-4">{children}</View>
 
-            {footer ? (
-              <View className="mt-8 flex-row justify-center">{footer}</View>
-            ) : null}
-          </View>
+              {footer ? (
+                <View className="mt-8 flex-row justify-center">{footer}</View>
+              ) : null}
+            </View>
           </ScrollView>
 
           <View
