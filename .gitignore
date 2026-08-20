@@ -37,6 +37,12 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# AI agent configs
+.claude/
+.devin/
+AGENTS.md
+CLAUDE.md
+
 # generated native folders
 /ios
 /android
